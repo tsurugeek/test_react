@@ -20,7 +20,7 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
+    <Hello name="React" />, // これは「const Hello」のこと。つまり、<div>Hello {props.name}!</div>のこと。
+    document.body.appendChild(document.createElement('div')), // 上記の引数をここにinsertするか。結果的に、bodyにappendchildされたdivになっている。
   )
 })
