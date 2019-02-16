@@ -62,10 +62,9 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
-    console.log("this.state.history.legth="+this.state.history.lenth);
-    console.log("this.state.stepNumber="+this.state.stepNumber);
+    console.log("Game#handleClick");
+    // update history. it means another history created.
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
-    console.log("history.legth="+history.lenth);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if(calculateWinner(squares) || squares[i]) {
@@ -80,6 +79,7 @@ class Game extends React.Component {
   }
 
   jumpTo(step) {
+    // don't update history
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0,
@@ -88,8 +88,6 @@ class Game extends React.Component {
 
   render() {
     console.log("Game#render");
-    console.log("this.state.history.legth="+this.state.history.lenth);
-    console.log("this.state.stepNumber="+this.state.stepNumber);
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
@@ -127,6 +125,7 @@ ReactDOM.render(
   document.getElementById('tic_tac_toe_root')
 );
 
+// I can't understand this.
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
