@@ -124,7 +124,7 @@ class Game extends React.Component {
 
 ReactDOM.render(
   <Game />,
-  document.getElementById('root')
+  document.getElementById('tic_tac_toe_root')
 );
 
 function calculateWinner(squares) {
