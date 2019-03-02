@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "babel-preset-mobx": "1.0.3",
     "babel-preset-react": "^6.24.1",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
