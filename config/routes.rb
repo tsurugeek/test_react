@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'tic_tac_toe#show'
   get 'questions/index'
   get 'tic_tac_toe/show'
+  get 'mobx/show'
 end

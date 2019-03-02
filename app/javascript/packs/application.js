@@ -10,3 +10,4 @@
 console.log('Hello World from Webpacker')
 //require('./hello_react.jsx')
 require('./tic_tac_toe.jsx')
+require('./mobx.jsx')
