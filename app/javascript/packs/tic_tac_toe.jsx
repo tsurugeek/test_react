@@ -121,10 +121,13 @@ class Game extends React.Component {
 
 // ========================================
 
-ReactDOM.render(
-  <Game />,
-  document.getElementById('tic_tac_toe_root')
-);
+if(document.getElementById('tic_tac_toe_root')){
+  ReactDOM.render(
+    <Game />,
+    document.getElementById('tic_tac_toe_root')
+  );
+}
+
 
 // I can't understand this.
 function calculateWinner(squares) {
