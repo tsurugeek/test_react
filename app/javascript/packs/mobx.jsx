@@ -45,4 +45,6 @@ class App extends React.Component {
 }
 
 const counterStore = new CounterStore()
-render(<App data={counterStore} />, document.getElementById('mobx_root'))
+if (document.getElementById('mobx_root')) {
+  render(<App data={counterStore} />, document.getElementById('mobx_root'))
+}

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'questions/index'
   get 'tic_tac_toe/show'
   get 'mobx/show'
+  get 'spa/show'
 end
