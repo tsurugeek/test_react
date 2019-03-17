@@ -1,6 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { observable, action, computed, configure } from 'mobx';
 import { inject, observer } from 'mobx-react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+// config
+configure({ enforceActions: 'always'});
+
 
 function Index() {
   return <h2>Home</h2>;
@@ -15,7 +20,7 @@ function Users() {
 }
 
 @inject('routing')
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     const { location, push, goBack } = this.props.routing;
 
